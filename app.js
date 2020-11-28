@@ -43,9 +43,9 @@ app.get('/failure', (req, res) => {
   res.render('failure', req.query);
 });
 
-app.post('/hook', (req) => {
+app.post('/hook', (req, res) => {
   console.log('Webhook!!!', req.body);
-  req.status(200).end();
+  res.status(200).end();
 });
 
 app.get('/detail', async(req, res, next) => {
